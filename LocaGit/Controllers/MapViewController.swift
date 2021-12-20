@@ -17,7 +17,13 @@ class MapViewController: UIViewController {
     var subscriptions: Set<AnyCancellable> = []
     var landmarks = [Landmark](){
         didSet{
-            print(landmarks)
+            landmarks.forEach {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = $0.coordinate
+                annotation.title = $0.name
+                annotation.subtitle = $0.vendorName
+                mapView.addAnnotation(annotation)
+            }
         }
     }
 
