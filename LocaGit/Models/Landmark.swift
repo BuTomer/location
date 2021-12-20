@@ -7,7 +7,7 @@
 //
 
 
-import UIKit
+import Foundation
 
 struct Landmark: Codable{
     let address: String

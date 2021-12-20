@@ -17,6 +17,7 @@
 		D53C32192770AA3B00273D99 /* camp_il.json in Resources */ = {isa = PBXBuildFile; fileRef = D53C32182770AA3B00273D99 /* camp_il.json */; };
 		D53C321C2770AA6C00273D99 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321B2770AA6C00273D99 /* Landmark.swift */; };
 		D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321D2770AA9200273D99 /* Landmarks.swift */; };
+		D53C32202770ABD900273D99 /* Landmark+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321F2770ABD900273D99 /* Landmark+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D53C32182770AA3B00273D99 /* camp_il.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = camp_il.json; sourceTree = "<group>"; };
 		D53C321B2770AA6C00273D99 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		D53C321D2770AA9200273D99 /* Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
+		D53C321F2770ABD900273D99 /* Landmark+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landmark+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				D53C321B2770AA6C00273D99 /* Landmark.swift */,
 				D53C321D2770AA9200273D99 /* Landmarks.swift */,
+				D53C321F2770ABD900273D99 /* Landmark+extensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				D53C320527708D0A00273D99 /* MapViewController.swift in Sources */,
 				D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */,
+				D53C32202770ABD900273D99 /* Landmark+extensions.swift in Sources */,
 				D53C320127708D0A00273D99 /* AppDelegate.swift in Sources */,
 				D53C320327708D0A00273D99 /* SceneDelegate.swift in Sources */,
 				D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */,
