@@ -30,9 +30,10 @@ class MapViewController: UIViewController {
     //lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
+        
         fetchLandmarks()
         observeAuth()
-        
         mapView.showsUserLocation = LocationManager.shared.isAuthorized
     }
 
@@ -70,5 +71,25 @@ extension MapViewController{
             } receiveValue: { landmarks in
                 self.landmarks = landmarks
             }.store(in: &subscriptions)
+    }
+}
+
+extension MapViewController: MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if !(annotation is MKPointAnnotation){
+            return nil
+        }
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? MKMarkerAnnotationView
+        
+        if annotationView == nil{
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
+        }else{
+            print("reuse") //scroll away from the country and come back
+        }
+        
+        annotationView?.markerTintColor = .blue
+        
+        return annotationView
     }
 }
