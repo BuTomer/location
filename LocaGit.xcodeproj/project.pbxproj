@@ -19,6 +19,8 @@
 		D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321D2770AA9200273D99 /* Landmarks.swift */; };
 		D53C32202770ABD900273D99 /* Landmark+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321F2770ABD900273D99 /* Landmark+extensions.swift */; };
 		D53C32232770ACBD00273D99 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32222770ACBD00273D99 /* LocationManager.swift */; };
+		D53C32272770BC1300273D99 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32262770BC1300273D99 /* Annotation.swift */; };
+		D53C32292770BCC400273D99 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32282770BCC400273D99 /* LandmarkAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		D53C321F2770ABD900273D99 /* Landmark+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landmark+extensions.swift"; sourceTree = "<group>"; };
 		D53C32222770ACBD00273D99 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D53C32242770B5A500273D99 /* IsraelTrip.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = IsraelTrip.gpx; sourceTree = "<group>"; };
+		D53C32262770BC1300273D99 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		D53C32282770BCC400273D99 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		D53C321A2770AA5C00273D99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D53C32252770BBE800273D99 /* Annotations */,
 				D53C321B2770AA6C00273D99 /* Landmark.swift */,
 				D53C321D2770AA9200273D99 /* Landmarks.swift */,
 				D53C321F2770ABD900273D99 /* Landmark+extensions.swift */,
@@ -109,6 +114,15 @@
 				D53C32222770ACBD00273D99 /* LocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		D53C32252770BBE800273D99 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				D53C32262770BC1300273D99 /* Annotation.swift */,
+				D53C32282770BCC400273D99 /* LandmarkAnnotation.swift */,
+			);
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +199,13 @@
 			files = (
 				D53C320527708D0A00273D99 /* MapViewController.swift in Sources */,
 				D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */,
+				D53C32292770BCC400273D99 /* LandmarkAnnotation.swift in Sources */,
 				D53C32202770ABD900273D99 /* Landmark+extensions.swift in Sources */,
 				D53C320127708D0A00273D99 /* AppDelegate.swift in Sources */,
 				D53C32232770ACBD00273D99 /* LocationManager.swift in Sources */,
 				D53C320327708D0A00273D99 /* SceneDelegate.swift in Sources */,
 				D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */,
+				D53C32272770BC1300273D99 /* Annotation.swift in Sources */,
 				D53C321C2770AA6C00273D99 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
