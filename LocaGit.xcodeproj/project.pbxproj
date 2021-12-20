@@ -14,6 +14,9 @@
 		D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D53C320927708D0A00273D99 /* LocaGit.xcdatamodeld */; };
 		D53C320D27708D0C00273D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53C320C27708D0C00273D99 /* Assets.xcassets */; };
 		D53C321027708D0C00273D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53C320E27708D0C00273D99 /* LaunchScreen.storyboard */; };
+		D53C32192770AA3B00273D99 /* camp_il.json in Resources */ = {isa = PBXBuildFile; fileRef = D53C32182770AA3B00273D99 /* camp_il.json */; };
+		D53C321C2770AA6C00273D99 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321B2770AA6C00273D99 /* Landmark.swift */; };
+		D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C321D2770AA9200273D99 /* Landmarks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		D53C320C27708D0C00273D99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53C320F27708D0C00273D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53C321127708D0C00273D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53C32182770AA3B00273D99 /* camp_il.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = camp_il.json; sourceTree = "<group>"; };
+		D53C321B2770AA6C00273D99 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		D53C321D2770AA9200273D99 /* Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		D53C31FF27708D0A00273D99 /* LocaGit */ = {
 			isa = PBXGroup;
 			children = (
+				D53C321A2770AA5C00273D99 /* Models */,
 				D53C32172770A50400273D99 /* Controllers */,
 				D53C320027708D0A00273D99 /* AppDelegate.swift */,
 				D53C320227708D0A00273D99 /* SceneDelegate.swift */,
@@ -66,6 +73,7 @@
 				D53C320E27708D0C00273D99 /* LaunchScreen.storyboard */,
 				D53C321127708D0C00273D99 /* Info.plist */,
 				D53C320927708D0A00273D99 /* LocaGit.xcdatamodeld */,
+				D53C32182770AA3B00273D99 /* camp_il.json */,
 			);
 			path = LocaGit;
 			sourceTree = "<group>";
@@ -76,6 +84,15 @@
 				D53C320427708D0A00273D99 /* MapViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D53C321A2770AA5C00273D99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D53C321B2770AA6C00273D99 /* Landmark.swift */,
+				D53C321D2770AA9200273D99 /* Landmarks.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53C321027708D0C00273D99 /* LaunchScreen.storyboard in Resources */,
+				D53C32192770AA3B00273D99 /* camp_il.json in Resources */,
 				D53C320D27708D0C00273D99 /* Assets.xcassets in Resources */,
 				D53C320827708D0A00273D99 /* Main.storyboard in Resources */,
 			);
@@ -150,9 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53C320527708D0A00273D99 /* MapViewController.swift in Sources */,
+				D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */,
 				D53C320127708D0A00273D99 /* AppDelegate.swift in Sources */,
 				D53C320327708D0A00273D99 /* SceneDelegate.swift in Sources */,
 				D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */,
+				D53C321C2770AA6C00273D99 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
