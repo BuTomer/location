@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  LocaGit
+//  LocaGit another git demo.
 //
 //  Created by Tomer Buzaglo 
 //  
