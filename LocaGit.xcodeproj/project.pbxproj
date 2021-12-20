@@ -36,6 +36,7 @@
 		D53C321D2770AA9200273D99 /* Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
 		D53C321F2770ABD900273D99 /* Landmark+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landmark+extensions.swift"; sourceTree = "<group>"; };
 		D53C32222770ACBD00273D99 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D53C32242770B5A500273D99 /* IsraelTrip.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = IsraelTrip.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 				D53C321127708D0C00273D99 /* Info.plist */,
 				D53C320927708D0A00273D99 /* LocaGit.xcdatamodeld */,
 				D53C32182770AA3B00273D99 /* camp_il.json */,
+				D53C32242770B5A500273D99 /* IsraelTrip.gpx */,
 			);
 			path = LocaGit;
 			sourceTree = "<group>";
