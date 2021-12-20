@@ -9,10 +9,28 @@
 
 import UIKit
 import MapKit
+import Combine
 
 class MapViewController: UIViewController {
-
+    //props:
     @IBOutlet weak var mapView: MKMapView!
+    var subscriptions: Set<AnyCancellable> = []
+    var landmarks = [Landmark](){
+        didSet{
+            print(landmarks)
+        }
+    }
+
+    //lifecycle:
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchLandmarks()
+        observeAuth()
+        
+        mapView.showsUserLocation = LocationManager.shared.isAuthorized
+    }
+
+    //actions:
     @IBAction func changeMapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
@@ -25,11 +43,26 @@ class MapViewController: UIViewController {
             fatalError()
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
 }
 
+//Helpers:
+extension MapViewController{
+    fileprivate func observeAuth() {
+        NotificationCenter.default.publisher(for: .Authorized, object: nil)
+            .subscribe(on: DispatchQueue.main, options: nil)
+            .sink {[weak self] notification in
+                self?.mapView.showsUserLocation = true
+            }
+            .store(in: &subscriptions)
+    }
+    
+    fileprivate func fetchLandmarks() {
+        Landmarks.load()
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { landmarks in
+                self.landmarks = landmarks
+            }.store(in: &subscriptions)
+    }
+}
