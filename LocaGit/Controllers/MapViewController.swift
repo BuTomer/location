@@ -24,13 +24,10 @@ class MapViewController: UIViewController {
     //lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
-        Landmarks.load()
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-            print(completion)
-        } receiveValue: { landmarks in
-            self.landmarks = landmarks
-        }.store(in: &subscriptions)
+        fetchLandmarks()
+        observeAuth()
+        
+        mapView.showsUserLocation = LocationManager.shared.isAuthorized
     }
 
     //actions:
@@ -48,3 +45,24 @@ class MapViewController: UIViewController {
     }
 }
 
+//Helpers:
+extension MapViewController{
+    fileprivate func observeAuth() {
+        NotificationCenter.default.publisher(for: .Authorized, object: nil)
+            .subscribe(on: DispatchQueue.main, options: nil)
+            .sink {[weak self] notification in
+                self?.mapView.showsUserLocation = true
+            }
+            .store(in: &subscriptions)
+    }
+    
+    fileprivate func fetchLandmarks() {
+        Landmarks.load()
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { landmarks in
+                self.landmarks = landmarks
+            }.store(in: &subscriptions)
+    }
+}
