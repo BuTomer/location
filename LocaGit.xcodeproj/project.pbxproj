@@ -21,6 +21,10 @@
 		D53C32232770ACBD00273D99 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32222770ACBD00273D99 /* LocationManager.swift */; };
 		D53C32272770BC1300273D99 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32262770BC1300273D99 /* Annotation.swift */; };
 		D53C32292770BCC400273D99 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32282770BCC400273D99 /* LandmarkAnnotation.swift */; };
+		D53C322C2770C97700273D99 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C322B2770C97700273D99 /* PlaceTableViewCell.swift */; };
+		D53C322E2770C98D00273D99 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C322D2770C98D00273D99 /* PlacesTableViewController.swift */; };
+		D53C32302770C99D00273D99 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C322F2770C99D00273D99 /* PlaceDetailsViewController.swift */; };
+		D53C32322770CEDA00273D99 /* CircularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C32312770CEDA00273D99 /* CircularLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		D53C32242770B5A500273D99 /* IsraelTrip.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = IsraelTrip.gpx; sourceTree = "<group>"; };
 		D53C32262770BC1300273D99 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		D53C32282770BCC400273D99 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		D53C322B2770C97700273D99 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		D53C322D2770C98D00273D99 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		D53C322F2770C99D00273D99 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		D53C32312770CEDA00273D99 /* CircularLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 		D53C31FF27708D0A00273D99 /* LocaGit */ = {
 			isa = PBXGroup;
 			children = (
+				D53C322A2770C96100273D99 /* Views */,
 				D53C32212770ACA100273D99 /* Location */,
 				D53C321A2770AA5C00273D99 /* Models */,
 				D53C32172770A50400273D99 /* Controllers */,
@@ -93,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				D53C320427708D0A00273D99 /* MapViewController.swift */,
+				D53C322D2770C98D00273D99 /* PlacesTableViewController.swift */,
+				D53C322F2770C99D00273D99 /* PlaceDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +134,15 @@
 				D53C32282770BCC400273D99 /* LandmarkAnnotation.swift */,
 			);
 			path = Annotations;
+			sourceTree = "<group>";
+		};
+		D53C322A2770C96100273D99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D53C322B2770C97700273D99 /* PlaceTableViewCell.swift */,
+				D53C32312770CEDA00273D99 /* CircularLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +220,13 @@
 				D53C320527708D0A00273D99 /* MapViewController.swift in Sources */,
 				D53C321E2770AA9200273D99 /* Landmarks.swift in Sources */,
 				D53C32292770BCC400273D99 /* LandmarkAnnotation.swift in Sources */,
+				D53C32322770CEDA00273D99 /* CircularLabel.swift in Sources */,
 				D53C32202770ABD900273D99 /* Landmark+extensions.swift in Sources */,
 				D53C320127708D0A00273D99 /* AppDelegate.swift in Sources */,
+				D53C322E2770C98D00273D99 /* PlacesTableViewController.swift in Sources */,
+				D53C322C2770C97700273D99 /* PlaceTableViewCell.swift in Sources */,
 				D53C32232770ACBD00273D99 /* LocationManager.swift in Sources */,
+				D53C32302770C99D00273D99 /* PlaceDetailsViewController.swift in Sources */,
 				D53C320327708D0A00273D99 /* SceneDelegate.swift in Sources */,
 				D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */,
 				D53C32272770BC1300273D99 /* Annotation.swift in Sources */,
