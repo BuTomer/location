@@ -17,16 +17,12 @@ class MapViewController: UIViewController {
     var subscriptions: Set<AnyCancellable> = []
     var landmarks = [Landmark](){
         didSet{
-            landmarks.forEach {
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = $0.coordinate
-                annotation.title = $0.name
-                annotation.subtitle = $0.vendorName
-                mapView.addAnnotation(annotation)
-            }
+            let annotations = landmarks.map(LandmarkAnnotation.init)
+            mapView.addAnnotations(annotations)
+            mapView.fit(annotations: annotations)
         }
     }
-
+    
     //lifecycle:
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +32,7 @@ class MapViewController: UIViewController {
         observeAuth()
         mapView.showsUserLocation = LocationManager.shared.isAuthorized
     }
-
+    
     //actions:
     @IBAction func changeMapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
@@ -77,19 +73,35 @@ extension MapViewController{
 extension MapViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        if !(annotation is MKPointAnnotation){
-            return nil
-        }
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? MKMarkerAnnotationView
+        guard let annotation =
+                annotation as? LandmarkAnnotation else {return nil}
+        var annotationView =
+        mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? MKMarkerAnnotationView
         
         if annotationView == nil{
-            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
+            annotationView = MKMarkerAnnotationView(
+                annotation: annotation, reuseIdentifier: "annotation")
         }else{
             print("reuse") //scroll away from the country and come back
         }
         
-        annotationView?.markerTintColor = .blue
+        annotationView?.markerTintColor = annotation.landmark.color
         
         return annotationView
+    }
+}
+
+extension MKMapView {
+
+    func fit(annotations: [MKAnnotation], with padding: CGFloat = 50) {
+        //null since we need the 1st point for the initial rect
+        var zoomRect: MKMapRect = .null
+        annotations.map{MKMapPoint($0.coordinate)}.forEach({
+            let rect = MKMapRect(x: $0.x, y: $0.y, width: 0.1, height: 0.1)
+            zoomRect = zoomRect.isNull ? rect : zoomRect.union(rect)
+        })
+
+        let insets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        setVisibleMapRect(zoomRect, edgePadding: insets, animated: true)
     }
 }
