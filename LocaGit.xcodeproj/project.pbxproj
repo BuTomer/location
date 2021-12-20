@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D53C320127708D0A00273D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C320027708D0A00273D99 /* AppDelegate.swift */; };
 		D53C320327708D0A00273D99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C320227708D0A00273D99 /* SceneDelegate.swift */; };
-		D53C320527708D0A00273D99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C320427708D0A00273D99 /* ViewController.swift */; };
+		D53C320527708D0A00273D99 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C320427708D0A00273D99 /* MapViewController.swift */; };
 		D53C320827708D0A00273D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53C320627708D0A00273D99 /* Main.storyboard */; };
 		D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D53C320927708D0A00273D99 /* LocaGit.xcdatamodeld */; };
 		D53C320D27708D0C00273D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53C320C27708D0C00273D99 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		D53C31FD27708D0A00273D99 /* LocaGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocaGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53C320027708D0A00273D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53C320227708D0A00273D99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D53C320427708D0A00273D99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D53C320427708D0A00273D99 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D53C320727708D0A00273D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D53C320A27708D0A00273D99 /* LocaGit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocaGit.xcdatamodel; sourceTree = "<group>"; };
 		D53C320C27708D0C00273D99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +58,9 @@
 		D53C31FF27708D0A00273D99 /* LocaGit */ = {
 			isa = PBXGroup;
 			children = (
+				D53C32172770A50400273D99 /* Controllers */,
 				D53C320027708D0A00273D99 /* AppDelegate.swift */,
 				D53C320227708D0A00273D99 /* SceneDelegate.swift */,
-				D53C320427708D0A00273D99 /* ViewController.swift */,
 				D53C320627708D0A00273D99 /* Main.storyboard */,
 				D53C320C27708D0C00273D99 /* Assets.xcassets */,
 				D53C320E27708D0C00273D99 /* LaunchScreen.storyboard */,
@@ -68,6 +68,14 @@
 				D53C320927708D0A00273D99 /* LocaGit.xcdatamodeld */,
 			);
 			path = LocaGit;
+			sourceTree = "<group>";
+		};
+		D53C32172770A50400273D99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D53C320427708D0A00273D99 /* MapViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53C320527708D0A00273D99 /* ViewController.swift in Sources */,
+				D53C320527708D0A00273D99 /* MapViewController.swift in Sources */,
 				D53C320127708D0A00273D99 /* AppDelegate.swift in Sources */,
 				D53C320327708D0A00273D99 /* SceneDelegate.swift in Sources */,
 				D53C320B27708D0A00273D99 /* LocaGit.xcdatamodeld in Sources */,
