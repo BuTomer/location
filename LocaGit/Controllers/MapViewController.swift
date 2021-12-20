@@ -86,9 +86,17 @@ extension MapViewController: MKMapViewDelegate{
         }
         
         annotationView?.markerTintColor = annotation.landmark.color
-        
+        annotationView?.canShowCallout = true
+        annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         return annotationView
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let annotation = view.annotation as? LandmarkAnnotation else {return}
+        print(annotation.landmark.name)
+        print("Your location is: \(LocationManager.shared.location)")
+    }
+    
 }
 
 extension MKMapView {
